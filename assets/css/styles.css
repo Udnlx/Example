@@ -1,0 +1,52 @@
+body {
+  background-color: green;
+}
+
+a {
+  color: #000000;
+}
+a:hover {
+  color: #ffffff;
+}
+
+#grid {
+  float: left;
+  width: 100%;
+}
+#grid div {
+  float: left;
+  background-color: red;
+  margin-bottom: 2%;
+  height: 150px;
+  width: 23.5%;
+  margin-right: 2%;
+  /* width: (((100% - ($cols - 1) * $margin)) / $cols); */
+}
+#grid div:nth-child(4n) {
+  margin-right: 0;
+}
+
+.some_class-24 {
+  width: 74px;
+  height: 74px;
+}
+
+.some_class-25 {
+  width: 75px;
+  height: 75px;
+}
+
+.some_class-26 {
+  width: 76px;
+  height: 76px;
+}
+
+.some_class-27 {
+  width: 77px;
+  height: 77px;
+}
+
+.some_class-28 {
+  width: 78px;
+  height: 78px;
+}

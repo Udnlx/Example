@@ -1,0 +1,50 @@
+$someVar: some_class;
+
+@mixin grid($cols, $margin) {
+	float: left;
+	background-color: red;
+	margin-bottom: $margin;
+	height: 150px;
+
+	@if($cols >=5) {
+		width: 100%;
+		margin-right: 0;
+	}
+	@else {
+		width: (((100% - ($cols - 1) * $margin)) / $cols);
+		margin-right: $margin;
+	}
+
+	/* width: (((100% - ($cols - 1) * $margin)) / $cols); */
+
+ 	&:nth-child(#{$cols}n) {
+		margin-right: 0;
+	}
+}
+
+body {
+  	background-color: green;
+}
+
+a {
+	color: #000000;
+	&:hover {
+		color: #ffffff
+	}
+}
+
+#grid {
+	float: left;
+	width: 100%;
+
+	div {
+		@include grid(4, 2%);
+	}
+}
+
+@for $i from 24 to 29 {
+	.#{$someVar}-#{$i} {
+		width: 50px +$i;
+		height: 50px +$i;
+	}
+}
